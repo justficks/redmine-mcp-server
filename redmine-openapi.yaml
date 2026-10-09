@@ -443,6 +443,11 @@ paths:
                       nullable: true
                     uploads:
                       $ref: "#/components/schemas/uploads"
+                    tag_list:
+                      type: array
+                      items:
+                        type: string
+                      description: Issue tags (tags plugin). Replaces the whole list of tags instead of appending. The issue JSON does not contain tags, read the current ones from the issue journals (include=journals, detail with name "tag_list", comma-separated string).
       responses:
         "201":
           description: ""
@@ -571,6 +576,11 @@ paths:
                       type: string
                     uploads:
                       $ref: "#/components/schemas/uploads"
+                    tag_list:
+                      type: array
+                      items:
+                        type: string
+                      description: Issue tags (tags plugin). Replaces the whole list of tags instead of appending. The issue JSON does not contain tags, read the current ones from the issue journals (include=journals, detail with name "tag_list", comma-separated string).
       responses:
         "204":
           description: ""
